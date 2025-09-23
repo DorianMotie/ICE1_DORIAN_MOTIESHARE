@@ -35,10 +35,10 @@ public class CardTrick {
             magicHand[i] = c;
             System.out.println(c.getSuit() + " " + c.getValue());
         }
-        //hardcoded lucky card that is 2 of clubs
+        //hardcoded lucky card that is 10 of hearts
         Card luckyCard = new Card();
-        luckyCard.setValue(2);
-        luckyCard.setSuit("Clubs");
+        luckyCard.setValue(10);
+        luckyCard.setSuit("Hearts");
         //asking user for the input
         Scanner input = new Scanner(System.in);
         System.out.print("Enter a card value (1—13): ");
