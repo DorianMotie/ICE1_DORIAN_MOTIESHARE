@@ -40,10 +40,10 @@ public class CardTrick {
         
         //asking user for the input
         Scanner input = new Scanner(System.in);
-        System.out.print("Enter a card value (1—13): ");
+        System.out.print("Enter a card value (1-13): ");
         int insertedValue = input.nextInt();
 
-        System.out.print("Enter a suit (0—3 where 0=Hearts, 1=Diamonds, 2=Clubs, 3=Spades): ");
+        System.out.print("Enter a suit (0-3 where 0=Hearts, 1=Diamonds, 2=Clubs, 3=Spades): ");
         int suitIndex = input.nextInt();
         String userSuit = Card.SUITS[suitIndex];
 
@@ -57,9 +57,9 @@ public class CardTrick {
 
         // Print result
         if (isInside) {
-            System.out.println("\nYay! Your card is in the magic hand.");
+            System.out.println("Yay! Your card is in the magic hand.");
         } else {
-            System.out.println("\nSorry, your card is not in the magic hand.");
+            System.out.println("Sorry, your card is not in the magic hand.");
         }
     }
 }
