@@ -1,7 +1,9 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
-dDorian Motieshare
+
+Modifier:
+Dorian Motieshare
 991783685
  */
 package card;
@@ -13,6 +15,9 @@ package card;
  * There are 52 cards in a deck, no jokers.
  * This code is to be used in ICE1. When you create your own branch,
  * add your name as a modifier.
+ * Modifier:
+    Dorian Motieshare
+    991783685
  * @author srinivsi
  */
 public class Card {
