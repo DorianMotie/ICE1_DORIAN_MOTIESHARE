@@ -35,9 +35,10 @@ public class CardTrick {
             magicHand[i] = c;
             System.out.println(c.getSuit() + " " + c.getValue());
         }
-        
-       
-        
+        //hardcoded lucky card that is 10 of hearts
+        Card luckyCard = new Card();
+        luckyCard.setValue(10);
+        luckyCard.setSuit("Hearts");
         //asking user for the input
         Scanner input = new Scanner(System.in);
         System.out.print("Enter a card value (1-13): ");
@@ -48,20 +49,26 @@ public class CardTrick {
         String userSuit = Card.SUITS[suitIndex];
 
         boolean isInside = false;
+
         for (Card card : magicHand) {
             if (card.getValue() == insertedValue && card.getSuit().equals(userSuit)) {
                 isInside = true;
                 break;
             }
         }
-
-        // Print result
-        if (isInside) {
+         if (!isInside && luckyCard.getValue() == insertedValue && luckyCard.getSuit().equals(userSuit)) {
+            isInside = true;
+        }
+         
+         if (isInside) {
             System.out.println("Yay! Your card is in the magic hand.");
         } else {
             System.out.println("Sorry, your card is not in the magic hand.");
         }
     }
-}
-   
+        
+      
+        
+ 
+    }
 
