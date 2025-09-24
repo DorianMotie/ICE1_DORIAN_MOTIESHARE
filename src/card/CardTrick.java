@@ -7,7 +7,7 @@
 
 
 package card;
-import java.util.Scanner;
+
 import java.util.Random;
 
 /**
@@ -40,35 +40,27 @@ public class CardTrick {
         luckyCard.setValue(10);
         luckyCard.setSuit("Hearts");
         //asking user for the input
-        Scanner input = new Scanner(System.in);
-        System.out.print("Enter a card value (1-13): ");
-        int insertedValue = input.nextInt();
-
-        System.out.print("Enter a suit (0-3 where 0=Hearts, 1=Diamonds, 2=Clubs, 3=Spades): ");
-        int suitIndex = input.nextInt();
-        String userSuit = Card.SUITS[suitIndex];
-
-        boolean isInside = false;
-
+  
+        //checking to see if the card is in the hand
+        boolean found = false;
         for (Card card : magicHand) {
-            if (card.getValue() == insertedValue && card.getSuit().equals(userSuit)) {
-                isInside = true;
+            if (card.getValue() == luckyCard.getValue() && card.getSuit().equals(luckyCard.getSuit())) {
+                found = true;
                 break;
             }
         }
-         if (!isInside && luckyCard.getValue() == insertedValue && luckyCard.getSuit().equals(userSuit)) {
-            isInside = true;
-        }
-         
-         if (isInside) {
-            System.out.println("Yay! Your card is in the magic hand.");
+
+        // Output result
+        System.out.println("Lucky Card: " + luckyCard.getSuit() + " " + luckyCard.getValue());
+        if (found) {
+            System.out.println("Yay! The lucky card is in the magic hand!");
         } else {
-            System.out.println("Sorry, your card is not in the magic hand.");
+            System.out.println("oh no, the lucky card is not in the magic hand.");
         }
     }
-        
+}
       
         
  
-    }
+    
 
